@@ -1,13 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AwsResponse } from '../models/aws-response';
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WelcomeService {
 
-  constructor(http: HttpClient) { }
+  private url = environment.infoUrl;
 
-  
+  constructor(protected http: HttpClient) { }
+
+  getSiteInformation(): Observable<AwsResponse> {
+
+    const headers = {
+      "Content-Type": "application/json"
+    }
+
+    return this.http.get<AwsResponse>(this.url, { headers: headers });
+  }
 
 }

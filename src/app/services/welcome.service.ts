@@ -14,13 +14,13 @@ export class WelcomeService {
 
   constructor(protected http: HttpClient) { }
 
-  getSiteInformation(): Observable<KennethCootaucoInfoResponse> {
+  getSiteInformation(): Observable<AwsResponse> {
 
     const headers = {
       "Content-Type": "application/json"
     }
 
-    return this.http.get<KennethCootaucoInfoResponse>(this.url, { headers: headers });
+    return this.http.get<AwsResponse>(this.url, { headers: headers });
   }
 
 }

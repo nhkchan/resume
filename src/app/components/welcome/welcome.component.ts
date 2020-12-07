@@ -11,17 +11,18 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class WelcomeComponent implements OnInit {
 
-  private siteInfoResp: KennethCootaucoInfoResponse;
+  siteInfoResp: KennethCootaucoInfoResponse;
 
   constructor(private welcomeService: WelcomeService) { }
 
   ngOnInit() {
     this.siteInfoResp = new KennethCootaucoInfoResponse();
     this.welcomeService.getSiteInformation().subscribe(
-      (info: KennethCootaucoInfoResponse) => {
-        this.siteInfoResp.availableForHire = info.availableForHire ? true : false;
-        this.siteInfoResp.siteVersion = info.siteVersion;
-        this.siteInfoResp.welcomeText = info.welcomeText;
+      (info: AwsResponse) => {
+        let siteInfo = JSON.parse(info.body);
+        this.siteInfoResp.availableForHire = siteInfo.availableForHire ? true : false;
+        this.siteInfoResp.siteVersion = siteInfo.siteVersion;
+        this.siteInfoResp.welcomeText = siteInfo.welcomeText;
       },
       (err: HttpErrorResponse) => {
         console.error(err);

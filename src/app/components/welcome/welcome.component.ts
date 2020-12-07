@@ -16,9 +16,12 @@ export class WelcomeComponent implements OnInit {
   constructor(private welcomeService: WelcomeService) { }
 
   ngOnInit() {
+    this.siteInfoResp = new KennethCootaucoInfoResponse();
     this.welcomeService.getSiteInformation().subscribe(
-      (info: AwsResponse) => {
-        this.siteInfoResp = JSON.parse(info.body);
+      (info: KennethCootaucoInfoResponse) => {
+        this.siteInfoResp.availableForHire = info.availableForHire ? true : false;
+        this.siteInfoResp.siteVersion = info.siteVersion;
+        this.siteInfoResp.welcomeText = info.welcomeText;
       },
       (err: HttpErrorResponse) => {
         console.error(err);

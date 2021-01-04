@@ -7,12 +7,12 @@
         <div class="col-lg-7">
           <div class="banner_content">
             <h3 class="text-uppercase">Hi,</h3>
-            <h1 class="text-uppercase">My name is Ken</h1>
-            <h5 class="text-uppercase">Front & Backend Developer</h5>
-            <div class="d-flex align-items-center">
+            <h1 class="text-uppercase nhk-header">My name is Ken</h1>
+            <h5 class="text-uppercase nhk-header">Front/Back-end Developer</h5>
+            <div>Java & (Java|Type)script (Angular focused)</div>
+            <!-- <div class="d-flex align-items-center">
               <a class="primary_btn" href="#"><span>Hire Me</span></a>
-              <!-- <a class="primary_btn tr-bg" href="#"><span>Get CV</span></a> -->
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-lg-5">
@@ -38,15 +38,9 @@
         <div class="main_title text-left">
           <h2>A little about me</h2>
           <p>
-            Whose given. Were gathered. There first subdue greater. Bearing you Whales heaven
-            midst their. Beast creepeth. Fish days.
+            <!-- reference the body of the backend response. -->
+            {{ siteInfoResp.welcomeText }}
           </p>
-          <p>
-            Is give may shall likeness made yielding spirit a itself together created after sea
-            is in beast beginning signs open god you're gathering whose gathered cattle let.
-            Creature whales fruit unto meat the life beginning all in under give two.
-          </p>
-          <!-- <a class="primary_btn" href="#"><span>Download CV</span></a> -->
         </div>
       </div>
     </div>
@@ -56,45 +50,47 @@
 
 <!--================ Start Features Area =================-->
 <section class="features_area section_gap_top">
+  <a id="services"></a>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">
         <div class="main_title">
           <h2>Technical Skillset</h2>
-          <p>
-            Is give may shall likeness made yielding spirit a itself togeth created
-            after sea <br> is in beast beginning signs open god you're gathering ithe
-          </p>
         </div>
       </div>
     </div>
     <div class="row feature_inner">
       <div class="col-lg-3 col-md-6">
         <div class="feature_item">
-          <img src="img/services/s1.png" alt="">
+          <i class="fab fa-angular services-icons"></i>
           <h4>UI/UX Development & Design</h4>
-          <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+          <p>Majoring in Javascript - statically typed leveraging Typescript.  UI Development focus on the Angular framework.</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="feature_item">
-          <img src="img/services/s2.png" alt="">
+          <i class="fab fa-java services-icons"></i>
           <h4>Backend API Development</h4>
-          <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+          <p>
+            With a focus on Java, Node.js, Python.  Experience with major frameworks including - Spring & ExpressJS
+          </p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="feature_item">
-          <img src="img/services/s3.png" alt="">
+          <i class="fa fa-cloud services-icons"></i>
           <h4>Multi-Cloud</h4>
-          <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+          <p>
+            Experience Developing & Deploying in the 3 major cloud providers - AWS, GCP & Azure.
+            Including Hybrid cloud solutions involving Kubernetes (Native & OpenShift)
+          </p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="feature_item">
-          <img src="img/services/s4.png" alt="">
+          <i class="fab fa-jenkins services-icons"></i>
           <h4>DevOps</h4>
-          <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+          <p>Automated deployments using various scripting languages (Python, shell, makefile).  Jenkins pipelines.  AWS CodePipeline.</p>
         </div>
       </div>
     </div>
@@ -117,22 +113,13 @@
           <div class="footer_social">
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-dribbble"></i></a>
-            <a href="#"><i class="fa fa-behance"></i></a>
+            <a gref="#"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
       </div>
     </div>
     <div class="row footer_bottom justify-content-center">
       <p class="col-lg-8 col-sm-12 footer-text">
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;<script>
-          document.write(new Date().getFullYear());
-
-        </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
-        <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        <a href="https://www.vecteezy.com/free-vector/id-card-background">Id Card Background Vectors by Vecteezy</a>
       </p>
     </div>
   </div>

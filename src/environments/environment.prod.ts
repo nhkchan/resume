@@ -1,3 +1,5 @@
+const hostname = 'https://kennethcootau.co';
 export const environment = {
-  production: true
+  production: true,
+  infoUrl: hostname + '/kc/info'
 };

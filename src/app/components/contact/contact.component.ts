@@ -70,6 +70,14 @@ export class ContactComponent implements OnInit {
             requiredValues.push(this.capitalize(control));
           }
 
+          //  Check invalid errors
+          if (ctrlError != null && ctrlError.invalid) {
+            if (!invalid) {
+              invalid = true;
+            }
+            invalidValues.push(this.capitalize(control));
+          }
+
           //  Check email errors
           if (ctrlError != null && ctrlError.email) {
             if (!invalid) {

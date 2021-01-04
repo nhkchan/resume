@@ -7,12 +7,15 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
 
+import { ReCaptchaDirective } from './directives/recaptcha.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    ReCaptchaDirective
   ],
   imports: [
     BrowserModule,

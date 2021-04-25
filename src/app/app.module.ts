@@ -11,7 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ToastrModule } from 'ngx-toastr';
 
-import { ReCaptchaDirective } from './directives/recaptcha.directive';
+import { RecaptchaModule, RecaptchaFormsModule } from "ng-recaptcha";
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import { ReCaptchaDirective } from './directives/recaptcha.directive';
     WelcomeComponent,
     ContactComponent,
     HeaderComponent,
-    ReCaptchaDirective
   ],
   imports: [
     BrowserModule,
@@ -27,6 +26,8 @@ import { ReCaptchaDirective } from './directives/recaptcha.directive';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
     ToastrModule.forRoot()
   ],
   providers: [],

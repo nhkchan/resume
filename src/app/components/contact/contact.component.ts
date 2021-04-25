@@ -4,18 +4,11 @@ import { Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { SqsService } from 'src/app/services/sqs.service';
 import { NhkMail } from 'src/app/models/nhk-mail-req.class';
-import { RECAPTCHA_URL } from 'src/app/directives/recaptcha.directive';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
-  providers: [
-    {
-      provide: RECAPTCHA_URL,
-      useValue: 'http://localhost:3000/validate/captcha'
-    }
-  ]
 })
 export class ContactComponent implements OnInit {
 
@@ -24,7 +17,7 @@ export class ContactComponent implements OnInit {
   constructor(
     public toastr: ToastrService,
     public fb: FormBuilder,
-    public sqsService: SqsService) {
+    public sqsService: SqsService,) {
       this.contactForm = this.getContactForm()
     }
 
@@ -110,8 +103,13 @@ export class ContactComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       subject: ['', Validators.required],
-      body: ['', Validators.required]
+      body: ['', Validators.required],
+      captcha: [null, Validators.required]
     })
+  }
+
+  resolved(event: any) {
+    console.log(event);
   }
 
 }

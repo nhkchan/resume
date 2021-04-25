@@ -18,8 +18,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
     this.siteInfoResp = new KennethCootaucoInfoResponse();
     this.welcomeService.getSiteInformation().subscribe(
-      (info: AwsResponse) => {
-        let siteInfo = JSON.parse(info.body);
+      (siteInfo: KennethCootaucoInfoResponse) => {
         this.siteInfoResp.availableForHire = siteInfo.availableForHire ? true : false;
         this.siteInfoResp.siteVersion = siteInfo.siteVersion;
         this.siteInfoResp.welcomeText = siteInfo.welcomeText;

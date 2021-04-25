@@ -56,7 +56,9 @@
             </div>
           </div>
           <div class="col-md-12 text-right">
-            <div nbRecaptcha key="6LdQLf8ZAAAAAGx_pacziwsMywRpDEbxTNGEvvZQ" formControlName="captcha"></div>
+            <!-- <div nbRecaptcha key="6LdQLf8ZAAAAAGx_pacziwsMywRpDEbxTNGEvvZQ" formControlName="captcha"></div> -->
+            <re-captcha (resolved)="resolved($event)" siteKey="6LdQLf8ZAAAAAGx_pacziwsMywRpDEbxTNGEvvZQ" required formControlName="captcha"></re-captcha>
+            <!-- <button (click)="resolved($event)" >Important</button> -->
           </div>
           <div class="col-md-12 text-right">
             <button type="submit" value="submit" class="primary_btn">
